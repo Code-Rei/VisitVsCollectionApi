@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: visit-vs-collection-api
+    env: dotnet
+    buildCommand: dotnet build
+    startCommand: dotnet run --project ClientAPI/ClientAPI.csproj
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: DefaultConnection
+        value: YOUR_SQL_CONNECTION_STRING
